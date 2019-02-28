@@ -4,8 +4,8 @@ import sensorService from './services/sensors'
 import Sensor from './components/Sensor'
 import Sensors from './components/AllSensor'
 const App = () => {
-  const [currentSensor, setCurrentSensor] = useState([''])
-  const [allSensors, setAllsensors] = useState([''])
+  const [currentSensor, setCurrentSensor] = useState([{date:0, sensor1:0, sensor2:0, sensor3:0, sensor4:0 }])
+  const [allSensors, setAllsensors] = useState([{date:0, sensor1:0, sensor2:0, sensor3:0, sensor4:0 }])
   
   useEffect(() => {
     sensorService.getCurrent().then(ser =>
